@@ -88,3 +88,27 @@ def check_letter(chosen_letter, hidden_word, tries, matches):
     return tries, end, matches
 
 
+def lose():
+    """
+     Prints out when the user has no available
+     choices and lost the game. Also shows
+     the user what the hidden word was.
+    """
+    print("You don't have any tries left")
+    print("The hidden word was " + word)
+
+    return True
+
+
+def win(revelead_word):
+    """
+    Prints out when the user guessed
+    the word and won. Also, it reveals
+    the word which the user guessed.
+    """
+    show_new_board(revelead_word)
+    print("Congratulations, you guessed the word!!!")
+
+    return True
+
+
