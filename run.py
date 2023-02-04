@@ -1,14 +1,14 @@
-# Chooses a random object from a list of objects (words)
+"""Chooses a random object from a list of objects (words)"""
 from random import choice
 
 
-# main variables for usage in developing the game
+# Main variables for usage in developing the game
 words = ['flower', 'piano', 'speaker', 'dinner', 'program']
 correct_letters = []
 incorrect_letters = []
-tries = 6
-right_answers = 0
-game_over = False
+TRIES = 6
+RIGHT_ANSWERS = 0
+GAME_OVER = False
 
 
 # Functions which will make the game work as planned
@@ -17,7 +17,7 @@ def choose_word(list_of_words):
     Chooses a random word from the list
     """
     chosen_word = choice(list_of_words)
-    different_letters = len(set(choose_word))
+    different_letters = len(set(chosen_word))
 
     return chosen_word, different_letters
 
@@ -25,11 +25,10 @@ def choose_word(list_of_words):
 def ask_letter():
     """
     Asks the user to choose a letter
-    throughout the while loop.
+    from the alphabet throughout the while loop.
     """
     chosen_letter = ''
     is_valid = False
-
     while not is_valid:
         chosen_letter = input("Please choose a letter")
 
@@ -43,15 +42,15 @@ def ask_letter():
 
 def show_new_board(chosen_word):
     """
-     Shows up everytime the user chooses a letter
-     and refreshes its current state based on user's
-     progress throughout the game
+    Shows up everytime the user chooses a letter
+    and refreshes its current state based on user's
+    progress throughout the game.
     """
     hidden_list = []
 
-    for l in chosen_word:
-        if l in correct_letters:
-            hidden_list.append(l)
+    for right_letter in chosen_word:
+        if right_letter in correct_letters:
+            hidden_list.append(right_letter)
         else:
             hidden_list.append('-')
 
@@ -90,7 +89,7 @@ def check_letter(chosen_letter, hidden_word, tries, matches):
 
 def lose():
     """
-     Prints out when the user has no available
+    Prints out when the user has no available
      choices and lost the game. Also shows
      the user what the hidden word was.
     """
@@ -100,13 +99,13 @@ def lose():
     return True
 
 
-def win(revelead_word):
+def win(revealed_word):
     """
     Prints out when the user guessed
     the word and won. Also, it reveals
     the word which the user guessed.
     """
-    show_new_board(revelead_word)
+    show_new_board(revealed_word)
     print("Congratulations, you guessed the word!!!")
 
     return True
@@ -114,19 +113,20 @@ def win(revelead_word):
 
 word, unique_letters = choose_word(words)
 
-while not game_over:
-    """
-    Creates the dynamic of the game by calling
-    all functions based on the player's choices
-    and repeats itself until the player looses
-    or wins and game ends.
-    """
+
+"""
+Creates the dynamic of the game by calling
+all functions based on the player's choices
+and repeats itself until the player looses
+or wins and game ends.
+"""
+while not GAME_OVER:
     print('\n' + '*' * 20 + '\n')
     show_new_board(word)
     print('\n')
     print('Incorrect letters: ' + '-'.join(incorrect_letters))
-    print(f'Tries: {tries}')
+    print(f'Tries: {TRIES}')
     print('\n' + '*' * 20 + '\n')
     letter = ask_letter()
-    tries, over, right_answers = check_letter(letter, word, tries, right_answers)
-    game_over = over
+    TRIES, over, RIGHT_ANSWERS = check_letter(letter, word, TRIES, RIGHT_ANSWERS) # noqa
+    GAME_OVER = over
