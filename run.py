@@ -22,4 +22,25 @@ def choose_word(list_of_words):
     return chosen_word, different_letters
 
 
+def ask_letter():
+    """
+    Asks the user to choose a letter
+    throughout the while loop.
+    """
+    chosen_letter = ''
+    is_valid = False
+
+    while not is_valid:
+        chosen_letter = input("Please choose a letter")
+
+        if chosen_letter.isalpha() and len(chosen_letter) == 1:
+            is_valid = True
+        else:
+            print("You haven't chosen a correct letter")
+
+    return chosen_letter
+
+
+
+
 
