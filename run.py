@@ -11,3 +11,15 @@ right_answers = 0
 game_over = False
 
 
+# Functions which will make the game work as planned
+def choose_word(list_of_words):
+    """
+    Chooses a random word from the list
+    """
+    chosen_word = choice(list_of_words)
+    different_letters = len(set(choose_word))
+
+    return chosen_word, different_letters
+
+
+
