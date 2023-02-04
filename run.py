@@ -41,6 +41,23 @@ def ask_letter():
     return chosen_letter
 
 
+def show_new_board(chosen_word):
+    """
+     Shows up everytime the user chooses a letter
+     and refreshes its current state based on user's
+     progress throughout the game
+    """
+    hidden_list = []
+
+    for l in chosen_word:
+        if l in correct_letters:
+            hidden_list.append(l)
+        else:
+            hidden_list.append('-')
+
+    print(' '.join(hidden_list))
+
+
 
 
 
