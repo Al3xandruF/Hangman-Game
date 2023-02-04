@@ -112,3 +112,21 @@ def win(revelead_word):
     return True
 
 
+word, unique_letters = choose_word(words)
+
+while not game_over:
+    """
+    Creates the dynamic of the game by calling
+    all functions based on the player's choices
+    and repeats itself until the player looses
+    or wins and game ends.
+    """
+    print('\n' + '*' * 20 + '\n')
+    show_new_board(word)
+    print('\n')
+    print('Incorrect letters: ' + '-'.join(incorrect_letters))
+    print(f'Tries: {tries}')
+    print('\n' + '*' * 20 + '\n')
+    letter = ask_letter()
+    tries, over, right_answers = check_letter(letter, word, tries, right_answers)
+    game_over = over
