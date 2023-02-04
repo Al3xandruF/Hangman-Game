@@ -58,6 +58,33 @@ def show_new_board(chosen_word):
     print(' '.join(hidden_list))
 
 
+def check_letter(chosen_letter, hidden_word, tries, matches):
+    """
+    Checks if the letter the user entered
+    matches with the hidden word.
+    Also, everytime the function checks
+    it will complete the lists of
+    correct/incorrect words.
+    Will also check if the user has one
+    try or less/ if the letter matches
+    the hidden word or if the user won or lost.
+    """
+    end = False
 
+    if chosen_letter in hidden_word and chosen_letter not in correct_letters:
+        correct_letters.append(chosen_letter)
+        matches += 1
+    elif chosen_letter in hidden_word and chosen_letter in correct_letters:
+        print("You have already found that letter, try with another one")
+    else:
+        incorrect_letters.append(chosen_letter)
+        tries -= 1
+
+    if tries == 0:
+        end = lose()
+    elif matches == unique_letters:
+        end = win(hidden_word)
+
+    return tries, end, matches
 
 
