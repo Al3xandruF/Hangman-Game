@@ -94,7 +94,7 @@ def lose():
      the user what the hidden word was.
     """
     print("You don't have any tries left")
-    print("The hidden word was " + word)
+    print("The hidden word was " + word + ". GAME OVER!")
 
     return True
 
