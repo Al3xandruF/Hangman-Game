@@ -30,7 +30,7 @@ def ask_letter():
     chosen_letter = ''
     is_valid = False
     while not is_valid:
-        chosen_letter = input("Please choose a letter: ")
+        chosen_letter = input("Please choose a letter:\n")
 
         if chosen_letter.isalpha() and len(chosen_letter) == 1:
             is_valid = True
