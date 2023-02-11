@@ -3,7 +3,13 @@ from random import choice
 
 
 # Main variables for usage in developing the game
-words = ['flower', 'piano', 'speaker', 'dinner', 'program']
+words = ['flower', 'piano', 'speaker', 'dinner', 'program', 'plane',
+         'geography', 'impressive', 'chicken', 'dinosaur', 'discovery',
+         'fascinating', 'definition', 'events', 'announcement', 'javascript',
+         'privacy', 'heroku', 'dashboard', 'sandwich', 'shortcut',
+         'headphones', 'keyboard', 'synthesizer', 'television', 'internet',
+         'rooster', 'interface', 'motherboard', 'computer', 'charger',
+         'history', 'vocabulary', 'acquisition', 'institute', 'lexicon']
 correct_letters = []
 incorrect_letters = []
 TRIES = 0
