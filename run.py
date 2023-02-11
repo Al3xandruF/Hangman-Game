@@ -6,9 +6,60 @@ from random import choice
 words = ['flower', 'piano', 'speaker', 'dinner', 'program']
 correct_letters = []
 incorrect_letters = []
-TRIES = 6
+TRIES = 0
 RIGHT_ANSWERS = 0
 GAME_OVER = False
+print('Welcome to Hangman Game!')
+pics = ['''
+      +---+
+      |   |
+          |
+          |
+          |
+          |
+    =========''', '''
+      +---+
+      |   |
+      O   |
+          |
+          |
+          |
+    =========''', '''
+      +---+
+      |   |
+      O   |
+      |   |
+          |
+          |
+    =========''', '''
+      +---+
+      |   |
+      O   |
+     /|   |
+          |
+          |
+    =========''', '''
+      +---+
+      |   |
+      O   |
+     /|\  |
+          |
+          |
+    =========''', '''
+      +---+
+      |   |
+      O   |
+     /|\  |
+     /    |
+          |
+    =========''', '''
+      +---+
+      |   |
+      O   |
+     /|\  |
+     / \  |
+          |
+    =========''']
 
 
 # Functions which will make the game work as planned
@@ -77,9 +128,10 @@ def check_letter(chosen_letter, hidden_word, tries, matches):
         print("You have already found that letter, try with another one")
     else:
         incorrect_letters.append(chosen_letter)
-        tries -= 1
+        tries += 1
+        print(pics[tries])
 
-    if tries == 0:
+    if tries == 6:
         end = lose()
     elif matches == unique_letters:
         end = win(hidden_word)
