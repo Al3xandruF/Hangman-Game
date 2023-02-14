@@ -16,7 +16,11 @@ In this version, the computer auto-generates a word from the library in which th
   - Future Features
 - Modules/ Functions/ Methods
 - Testing
+  - Bugs
+    - Solved Bugs
+  - Remaining Bugs
 - Validator Testing
+- Programs Used
 - Deployment
 - Credits
 
@@ -74,6 +78,7 @@ The computer will generate a word in which the user will have to guess by sugges
 
 ### **Modules/ Functions/ Methods**
 ---
+**Resume:**
 
 - Choice function from random module has been used to generate a word from the 'words' variable under the choose_word function.
 - isalpha() method was used for the input to accept only alphabet letters (a-z).
@@ -88,6 +93,29 @@ Manual Testing:
 - Local terminal testing.
 - Tested in the Code Institute Heroku terminal.
 - Given W605 invalid escape sequence '\ '.
+
+### **Bugs**
+
+  - **Solved Bugs**
+    - Choosing more than once the already guessed letter, within the hidden word and after the last available try, the program was telling the user it won. This was a bug so in addition to checking if a chosen letter is in a hidden word, I had to add a second condition 'and' so it can also check if the chosen letter is not in the correct letters list. This way the program will not only check if the letter chosen by the user is in the hidden word bull will also check if previously chosen letters were not added to the correct letters list.
+
+### **Remaining Bugs**
+---
+ - No remaining bugs
+
+### **Validator Testing**
+---
+
+- CI: Pep8 Python Validator
+
+### **Programs Used**
+---
+
+- Git for version control
+- Github for saving and storing the files for the website.
+- Code Institute mock terminal for deployment to Heroku
+- Heroku: For hosting and storing the program.
+
 
 ### **Deployment**
 ---
