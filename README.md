@@ -1,31 +1,108 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# **Hangman Game**
 
-Welcome Al3xandruF,
+The **Hangman Game** is a Python based terminal game, which runs in Code Institute mock terminal on Heroku.
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+In this version, the computer auto-generates a word from the library in which the user will have to guess before waisting all available tries which will result in losing the game.
 
-## Reminders
+[Hangman Game - Live Version](https://hangman-game-p3-python.herokuapp.com/)
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+![responsive](../hangman_game_project-3_Python/screenshots/responsive.png)
 
-## Creating the Heroku app
+## **Contents**
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+- How to play
+- Features:
+  - Existing Features
+  - Future Features
+- Modules/ Functions/ Methods
+- Testing
+- Validator Testing
+- Deployment
+- Credits
 
-1. `heroku/python`
-2. `heroku/nodejs`
+### **How to play**
+---
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+This Python terminal version of **Hangman** is based on the classic pen-and-paper game ([Wikipedia](https://en.wikipedia.org/wiki/Hangman_(game))).  
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+In this instance, **Hangman Game** is a guessing game between the computer and the user.  
 
-Connect your GitHub repository and deploy as normal.
+The computer will generate a word in which the user will have to guess by suggesting letters within 6 guesses.  
 
-## Constraints
+### **Features**
+---
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+**Existing Features**
 
------
-Happy coding!
+- Welcoming message.
+- Hidden word which the user will have to guess.
+- The 'incorrect letters' variable which will display all wrong letters chosen by the user throughout the game.
+- The number of tries.
+- The input where the user types the letters and triggers the game. 
+
+![main_screen](../hangman_game_project-3_Python/screenshots/main_screen.png) 
+
+- Accepts user input.
+- Displays the incorrect letters.
+- Shows the number of tries. 
+
+![maine_screen1](../hangman_game_project-3_Python/screenshots/main_screen1.png)
+
+
+- Input validation and error-checking:
+  - Tells the user an incorrect letter has been chosen if numbers, words or other symbols are used to guess the hidden word.
+  - You must enter only lower case letters.
+
+![main_screen2](../hangman_game_project-3_Python/screenshots/main_screen2.png)
+
+- When no tries are left, the user loses and the computer will show there are no tries left while displaying the hidden word.
+
+![main_screen3](../hangman_game_project-3_Python/screenshots/main_screen3.png)
+
+- If the player wins, the hidden word is displayed and the computer congratulates the user.
+
+![main_screen4](../hangman_game_project-3_Python/screenshots/main_screen4.png)
+
+### **Future Features**
+---
+
+- Will allow the user to choose the complexity of the game by:
+  - Having options in how to play the game by guessing:
+    - Single words
+    - Short sentences
+    - Names
+
+### **Modules/ Functions/ Methods**
+---
+
+- Choice function from random module has been used to generate a word from the 'words' variable under the choose_word function.
+- isalpha() method was used for the input to accept only alphabet letters (a-z).
+- len() function was used for the chosen letter to be only one character.
+
+### **Testing**
+---
+
+Manual Testing:
+
+- Passed the code through PEP8 linter for no errors confirmation.
+- Local terminal testing.
+- Tested in the Code Institute Heroku terminal.
+- Given W605 invalid escape sequence '\ '.
+
+### **Deployment**
+---
+The project was deployed using Code Institute's mock terminal for Heroku.
+- Steps for deployment:
+  - Clone or Fork the repository.
+  - Create a new heroku app.
+  - Set the buildpacks to Python first and then NodeJS.
+  - Link the Heroku app to the github repository.
+  - Click on deploy.
+
+### **Credits**
+---
+
+- Code Institute for the deployment terminal.
+- Wikipedia for the Hangman Game details.
+- [Chris Horton](https://gist.github.com/chrishorton) for the Hangman word bank.
+

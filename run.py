@@ -17,55 +17,55 @@ RIGHT_ANSWERS = 0
 GAME_OVER = False
 print('Welcome to Hangman Game!')
 pics = ['''
-      +---+
-      |   |
-          |
-          |
-          |
-          |
-    =========''', '''
-      +---+
-      |   |
-      O   |
-          |
-          |
-          |
-    =========''', '''
-      +---+
-      |   |
-      O   |
-      |   |
-          |
-          |
-    =========''', '''
-      +---+
-      |   |
-      O   |
-     /|   |
-          |
-          |
-    =========''', '''
-      +---+
-      |   |
-      O   |
-     /|\  |
-          |
-          |
-    =========''', '''
-      +---+
-      |   |
-      O   |
-     /|\  |
-     /    |
-          |
-    =========''', '''
-      +---+
-      |   |
-      O   |
-     /|\  |
-     / \  |
-          |
-    =========''']
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+      |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+  |   |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+ /|   |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ /    |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ / \  |
+      |
+=========''']
 
 
 # Functions which will make the game work as planned
@@ -186,5 +186,5 @@ while not GAME_OVER:
     print(f'Tries: {TRIES}')
     print('\n' + '*' * 20 + '\n')
     letter = ask_letter()
-    TRIES, over, RIGHT_ANSWERS = check_letter(letter, word, TRIES, RIGHT_ANSWERS) # noqa
+    TRIES, over, RIGHT_ANSWERS = check_letter(letter, word, TRIES, RIGHT_ANSWERS)  # noqa
     GAME_OVER = over
