@@ -6,7 +6,7 @@ In this version, the computer auto-generates a word from the library in which th
 
 [Hangman Game - Live Version](https://hangman-game-p3-python.herokuapp.com/)
 
-![responsive](../hangman_game_project-3_Python/screenshots/responsive.png)
+![responsive](/assets/screenshots/responsive.png)
 
 ## **Contents**
 
@@ -40,28 +40,28 @@ The computer will generate a word in which the user will have to guess by sugges
 - The number of tries.
 - The input where the user types the letters and triggers the game. 
 
-![main_screen](../hangman_game_project-3_Python/screenshots/main_screen.png) 
+![main_screen](/assets/screenshots/main_screen.png) 
 
 - Accepts user input.
 - Displays the incorrect letters.
 - Shows the number of tries. 
 
-![maine_screen1](../hangman_game_project-3_Python/screenshots/main_screen1.png)
+![maine_screen1](/assets/screenshots/main_screen1.png)
 
 
 - Input validation and error-checking:
   - Tells the user an incorrect letter has been chosen if numbers, words or other symbols are used to guess the hidden word.
   - You must enter only lower case letters.
 
-![main_screen2](../hangman_game_project-3_Python/screenshots/main_screen2.png)
+![main_screen2](/assets/screenshots/main_screen2.png)
 
 - When no tries are left, the user loses and the computer will show there are no tries left while displaying the hidden word.
 
-![main_screen3](../hangman_game_project-3_Python/screenshots/main_screen3.png)
+![main_screen3](/assets/screenshots/main_screen3.png)
 
 - If the player wins, the hidden word is displayed and the computer congratulates the user.
 
-![main_screen4](../hangman_game_project-3_Python/screenshots/main_screen4.png)
+![main_screen4](/assets/screenshots/main_screen4.png)
 
 ### **Future Features**
 ---
